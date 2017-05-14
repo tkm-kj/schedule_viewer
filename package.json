@@ -1,0 +1,26 @@
+{
+  "name": "schedule_viewer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-react": "^6.24.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/tkm-kj/schedule_viewer.git",
+  "author": "Takumi Kaji <ivezuki3@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tkm-kj/schedule_viewer/issues"
+  },
+  "homepage": "https://github.com/tkm-kj/schedule_viewer#readme"
+}
