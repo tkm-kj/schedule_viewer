@@ -11,9 +11,13 @@ class App extends Component {
   }
 
   componentDidMount() {
-    setInterval(() => {
+    this.timer = setInterval(() => {
       return this.setState({currentTime: moment()});
     }, 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
   }
 
   render() {
