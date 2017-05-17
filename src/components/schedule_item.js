@@ -5,27 +5,16 @@ import moment from 'moment';
 class ScheduleItem extends Component {
   constructor(props) {
     super(props)
-    this.state = {ongoing: false}
-    this.checkOngoing = this.checkOngoing.bind(this)
+    this.checkActive = this.checkActive.bind(this)
   }
 
-  componentDidMount() {
-    this.checkOngoing();
-  }
-
-  componentWillReceiveProps() {
-    this.checkOngoing();
-  }
-
-  checkOngoing() {
-    this.setState({
-      ongoing: this.props.currentTime >= moment(this.props.startAt) && this.props.currentTime < moment(this.props.endAt)
-    });
+  checkActive() {
+    return this.props.currentTime >= moment(this.props.startAt) && this.props.currentTime < moment(this.props.endAt)
   }
 
   render() {
     return (
-      <tr style={{color: this.state.ongoing ? 'red' : ''}}>
+      <tr style={{color: this.checkActive() ? 'red' : ''}}>
         <td>{this.props.name}</td>
         <td>{this.props.creator}</td>
         <td>{this.props.startAt}</td>
