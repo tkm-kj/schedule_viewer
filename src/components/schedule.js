@@ -10,7 +10,7 @@ class Schedule extends Component {
 
   renderItems() {
     return this.props.items.map((item, i) => {
-      return <ScheduleItem name={item.name} creator={item.creator} startAt={item.startAt} endAt={item.endAt} key={i} />
+      return <ScheduleItem name={item.name} creator={item.creator} startAt={item.startAt} endAt={item.endAt} key={i} currentTime={this.props.currentTime} />
     });
   }
   render() {
@@ -24,7 +24,8 @@ class Schedule extends Component {
   }
 }
 Schedule.propTypes = {
-  items: PropTypes.array.isRequired
+  items: PropTypes.array.isRequired,
+  currentTime: PropTypes.object.isRequired
 }
 
 export default Schedule;
