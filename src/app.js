@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import moment from 'moment';
-import Schedule from './components/schedule'
+import Board from './components/board'
 import schedules from './data/schedules'
 
 class App extends Component {
@@ -22,7 +22,7 @@ class App extends Component {
 
   render() {
     return (
-      <Schedule items={schedules} currentTime={this.state.currentTime} />
+      <Board schedules={schedules} currentTime={this.state.currentTime} />
     );
   }
 }
